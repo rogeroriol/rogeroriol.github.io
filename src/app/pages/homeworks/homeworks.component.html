@@ -1,0 +1,56 @@
+<!-- ======= Table Section ======= -->
+<div class="intro bg-my">
+    <div class="div-mf sect-pt4 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="box-shadow-full">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="div-mf pt-4 pt-md-0">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            Lista de practicas
+                                        </h5>
+                                    </div>
+                                    <table class="table table-hover rounded">
+                                        <thead>
+                                            <tr>
+                                                <th>Titulo</th>
+                                                <th>Tags</th>
+                                                <th class="text-center">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let homework of homeworks; let i=index">
+
+                                                <td> {{ homework.title }}</td>
+                                                <td> #{{ homework.tag }}</td>
+                                                <td class="text-center">
+                                                    <button class="btn bg-transparent text-primary"
+                                                        (click)="seeDetails(i)"><i class="far fa-eye"></i></button>
+                                                    
+
+                                                        <button *ngIf="user != null" class="btn bg-transparent text-success"
+                                                                (click)="updateDocument(i)"><i class="fas fa-pencil-alt"></i></button>
+
+                                                        <button *ngIf="user != null" class="btn bg-transparent text-danger"
+                                                            (click)="deleteHomework(i)"><i
+                                                                class="fas fa-trash"></i></button>
+                                                        
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button *ngIf="user != null" class="btn bg-transparent text-success" (click)="createElement()"><i
+                                            class="fas fa-plus"></i> Practica</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Table Section -->

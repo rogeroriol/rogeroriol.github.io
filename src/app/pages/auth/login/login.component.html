@@ -1,0 +1,16 @@
+<div class="intro bg-myBlack">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center box-shadow-full bg-transparent">
+              <div class="col-12 col-md-4 text-center">
+                <h1 class="text-center text-white pb-4">Auth</h1>
+
+                <h6 *ngIf="allowUserError " class="text-center text-danger pb-2">Error de permisos, vuelve a intentarlo.</h6>
+                <h6 *ngIf="loginError" class="text-center text-danger pb-2">Error de usuario, vuelve a intentarlo.</h6>
+
+                <button (click)="login()" *ngIf="!allowUserError" class="text-center btn text-white bg-transparent border-3 border-right-0 border-bottom border-left-0 border-bottom border-white" placeholder="Username">Iniciar Session</button>
+                <button (click)="login()" *ngIf="allowUserError" class="text-center btn text-white bg-transparent border-3 border-right-0 border-bottom border-left-0 border-bottom border-white" placeholder="Username">Canviar de usuario</button>
+
+              </div>   
+            </div>
+        </div>
+</div>
