@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { CreateDocumentComponent } from './pages/admin/create-document/create-document.component';
 import { UpdateDocumentComponent } from './pages/admin/update-document/update-document.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { UpdateDocumentComponent } from './pages/admin/update-document/update-do
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    CKEditorModule
+    CKEditorModule,
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
